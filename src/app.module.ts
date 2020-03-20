@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AuthorsModule } from './authors/authors.module';
 import { APP_PIPE } from '@nestjs/core';
+import { BooksModule } from './books/books.module';
 
 @Module({
   imports: [
@@ -11,7 +12,8 @@ import { APP_PIPE } from '@nestjs/core';
       useNewUrlParser: true,
       useUnifiedTopology: true,
     }),
-    AuthorsModule
+    AuthorsModule,
+    BooksModule
   ],
   controllers: [AppController],
   providers: [
